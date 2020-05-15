@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+h3 {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
