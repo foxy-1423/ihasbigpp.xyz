@@ -12,9 +12,32 @@
 </head>
 
 <body style="background-color: black;">
-    <div>
-        <h3> You has big PP</h3>
+    <div id="button1" onclick="changeFontSize(this)">
+        <h3 id="demo"> You has big PP</h3>
     </div>
+
+    <script>
+        function changeFontSize(target) {
+            var demo = document.getElementById("demo");
+            var computedStyle = window.getComputedStyle ?
+                getComputedStyle(demo) // Standards
+                :
+                demo.currentStyle; // Old IE
+            var fontSize;
+
+            if (computedStyle) { // This will be true on nearly all browsers
+                fontSize = parseFloat(computedStyle && computedStyle.fontSize);
+
+                if (target == document.getElementById("button1")) {
+                    fontSize += 7.5;
+                } else if (target == document.getElementById("button2")) {
+                    fontSize -= 5;
+                }
+                demo.style.fontSize = fontSize + "px";
+            }
+        }
+    </script>
+
 </body>
 
 </html>

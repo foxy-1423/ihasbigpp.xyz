@@ -9,4 +9,9 @@ div {
     display: flex;
     justify-content: space-evenly;
     padding-top: 5%;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
